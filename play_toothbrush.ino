@@ -19,12 +19,10 @@ void setup() {
   pinMode(TOOTHBRUSH1, OUTPUT);
   pinMode(TOOTHBRUSH2, OUTPUT);
   pinMode(BUTTON, INPUT_PULLUP);
-  Serial.begin(9600);
 }
 
 bool toothbrush_callback(int toothbrush, int loudness, int duration, unsigned long timestamp, bool* called) {
   if (!(*called) && millis() < (timestamp+duration-NOTE_SPACE)) {
-    //Serial.println("NOTE START");
     analogWrite(toothbrush, loudness);
     (*called) = true;
     return false;
