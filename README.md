@@ -1,5 +1,4 @@
 # ArduinoToothbrush
-
 Arduino microprocessor code to control the pitch of two toothbrushes programmatically. 
 
 ## Code
